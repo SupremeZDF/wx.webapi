@@ -9,6 +9,7 @@ using System.Xml;
 using WX.Model;
 using BT.Manage.Tools.Utils;
 using System.Linq;
+using System.Xml.Serialization;
 
 namespace WX.Applications.Applications
 {
@@ -16,7 +17,7 @@ namespace WX.Applications.Applications
     {
 
 
-        public static void GetXMLString<T>(T obj) where T : class
+        public static XmlDocument GetXMLString<T>(T obj) where T : class
         {
             XmlDocument document = new XmlDocument();
             //创建xml声明
@@ -37,7 +38,7 @@ namespace WX.Applications.Applications
             if (obj == null)
             {
                 //postProcess(document);
-                return;
+                return document;
             }
             Type objType = obj.GetType();
             var propers = objType.GetProperties();
@@ -112,6 +113,16 @@ namespace WX.Applications.Applications
                     }
                 }
             }
+            return document;
+        }
+
+
+        public static void XmlSerLieHua() 
+        {
+
+            //object t = new object();
+            //XmlSerializer xmlSerializer = new XmlSerializer();
+
         }
 
 

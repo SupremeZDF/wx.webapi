@@ -13,7 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
 
-namespace wx.webapi
+namespace Socket.Client
 {
     public class Startup
     {
@@ -27,6 +27,7 @@ namespace wx.webapi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddControllers();
 
             services.AddSwaggerGen((c) =>
@@ -42,7 +43,7 @@ namespace wx.webapi
                 //c.OperationFilter<FliterParameter>();
 
                 var basePath = PlatformServices.Default.Application.ApplicationBasePath;
-                var xmlPath = Path.Combine(basePath, "Socket.Serverice.xml");
+                var xmlPath = Path.Combine(basePath, "Socket.Client.xml");
                 c.IncludeXmlComments(xmlPath);
             });
         }
@@ -57,13 +58,13 @@ namespace wx.webapi
 
             app.UseHttpsRedirection();
 
+            app.UseRouting();
+
             app.UseSwagger();
             app.UseSwaggerUI((c) =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "dsadasdasdas");
             });
-
-            app.UseRouting();
 
             app.UseAuthorization();
 
