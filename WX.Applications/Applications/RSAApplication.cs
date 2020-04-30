@@ -29,7 +29,7 @@ namespace WX.Applications
             //UTF-16
             byte[] vs = Encoding.Unicode.GetBytes("123");
             byte[] vs1 = mD5.ComputeHash(vs);
-            string md5str = null; //5fa285e1bebea6623e33afc4a1fbd5
+            string md5str = null; //5fa285e1bebea6 623e33afc4a1fbd5
             for (var i = 0; i < vs1.Length; i++)
             {
                 var d = vs1[i];
@@ -92,6 +92,8 @@ namespace WX.Applications
             }
         }
 
+
+
         /// <summary>
         /// Md5加密 第四种方法
         /// </summary>
@@ -100,5 +102,20 @@ namespace WX.Applications
             MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
         }
 
+        /// <summary>
+        /// SHA1 算法加密
+        /// </summary>
+        public static void OneSHA1() 
+        {
+            var buffer = Encoding.UTF8.GetBytes("123");
+            var sha1 = SHA1.Create(); 
+            var data = sha1.ComputeHash(buffer);
+            StringBuilder str = new StringBuilder();  
+            foreach (var i in data) 
+            {
+                str.Append(i.ToString("x2"));
+            }
+            var c = str.ToString();  //40bd001563085fc35165329ea1ff5c5ecbdbbeef
+        }
     }
 }

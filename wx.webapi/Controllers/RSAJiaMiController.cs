@@ -19,7 +19,7 @@ namespace wx.webapi.Controllers
         [HttpGet]
         public void GetMd5() 
         {
-            RSAApplication.GetMd5Str();
+            RSAApplication.OneSHA1();
         }
     }
 }
