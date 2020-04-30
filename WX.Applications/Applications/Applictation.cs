@@ -10,6 +10,7 @@ using WX.Model;
 using BT.Manage.Tools.Utils;
 using System.Linq;
 using System.Xml.Serialization;
+using System.Net.Sockets;
 
 namespace WX.Applications.Applications
 {
@@ -117,6 +118,21 @@ namespace WX.Applications.Applications
         }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public  static void ClientTcp() 
+        {
+            TcpClient client = new TcpClient("127.0.0.1", 1234);
+            NetworkStream sendStream = client.GetStream();
+            Byte[] sendBytes = Encoding.Default.GetBytes("232");
+            sendStream.Write(sendBytes, 0, sendBytes.Length);
+            sendStream.Flush();
+            sendStream.Close();//关闭网络流  
+            client.Close();//关闭客户端 
+        }
+
+
         public static void XmlSerLieHua() 
         {
 
@@ -137,6 +153,7 @@ namespace WX.Applications.Applications
             string responseContent = "";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create($@"https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx3b44e9df72794564&secret=da993f49d2e17d99fd2bc45b9ba0ffa4");
             request.ContentType = "application/json";
+            
             request.Method = "GET";
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
             //在这里对接收到的页面内容进行处理
@@ -149,6 +166,8 @@ namespace WX.Applications.Applications
             }
             return responseContent;
         }
+
+
 
         public static string GetShouQuanCode()
         {

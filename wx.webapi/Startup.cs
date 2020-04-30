@@ -42,7 +42,7 @@ namespace wx.webapi
                 //c.OperationFilter<FliterParameter>();
 
                 var basePath = PlatformServices.Default.Application.ApplicationBasePath;
-                var xmlPath = Path.Combine(basePath, "Socket.Serverice.xml");
+                var xmlPath = Path.Combine(basePath, "Demo.xml");
                 c.IncludeXmlComments(xmlPath);
             });
         }
