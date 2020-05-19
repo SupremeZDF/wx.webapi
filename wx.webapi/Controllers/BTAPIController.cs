@@ -13,6 +13,15 @@ namespace wx.webapi.Controllers
     [Route("api/[controller]/[action]")]
     public class BTAPIController : ControllerBase
     {
+
+
+
+        [HttpPost]
+        public void GetSOA() 
+        {
+            Applictation.SOAZHUANFA();
+        }
+
         /// <summary>
         /// 获取XML文档
         /// </summary>

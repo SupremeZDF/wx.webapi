@@ -167,6 +167,26 @@ namespace WX.Applications.Applications
             return responseContent;
         }
 
+        /// <summary>
+        /// SOA转发
+        /// </summary>
+        public static void SOAZHUANFA() 
+        {
+            string responseContent = "";
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create($@"http://localhost:7818/bankapi/FrameForward/post/Bangk.WeatherForecast.Name/");
+            request.ContentType = "application/json";
+
+            request.Method = "POST";
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            //在这里对接收到的页面内容进行处理
+            using (Stream resStream = response.GetResponseStream())
+            {
+                using (StreamReader stream = new StreamReader(resStream, Encoding.UTF8))
+                {
+                    responseContent = stream.ReadToEnd().ToString();
+                }
+            }
+        }
 
 
         public static string GetShouQuanCode()

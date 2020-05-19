@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WX.Applications.Applications;
+using WX.Model.Objects;
 
 namespace wx.webapi.Controllers
 {
@@ -54,6 +55,34 @@ namespace wx.webapi.Controllers
         public void GetDG() 
         {
             Applictation.GetDG();
+        }
+
+
+        [HttpGet]
+        public void ObjectTest() 
+        {
+
+            var a = string.IsNullOrWhiteSpace("");
+            var b = string.IsNullOrWhiteSpace("    ");
+            var c = string.IsNullOrWhiteSpace(null);
+
+            DateTime? dateTime = null;
+
+            var s = dateTime;
+
+            //TwoDemo demo = new TwoDemo();
+            //demo.authenticationstatus = 1;
+            //demo.authorizeid = 12;
+            //demo.businesstype = 4;
+            //demo.creditid = 123;
+            //demo.data = "{sdasdasd}";
+            //demo.estageOrderNo = "dsadas";
+
+            //object s = demo;
+
+            //var a = Newtonsoft.Json.JsonConvert.SerializeObject(s);
+
+            //var c = Newtonsoft.Json.JsonConvert.DeserializeObject<OneDemo>(a);
         }
     }
 }
