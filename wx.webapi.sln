@@ -9,7 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WX.Model", "WX.Model\WX.Mod
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WX.Applications", "WX.Applications\WX.Applications.csproj", "{9050AF66-C5CB-464A-9414-C8A30F9CBBE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Socket.Client", "Socket.Client\Socket.Client.csproj", "{62799674-E04D-44FA-B189-87D195F89AB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Socket.Client", "Socket.Client\Socket.Client.csproj", "{62799674-E04D-44FA-B189-87D195F89AB8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dapper", "Dapper\Dapper.csproj", "{DDCE530E-B7D3-4010-896C-2A83DC63C77F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ORM", "ORM\ORM.csproj", "{33315B4A-4DE3-4391-BDA1-C3F320A6B185}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrmMvc", "OrmMvc\OrmMvc.csproj", "{4FBDBE61-F4FE-4090-B068-049FF9175F6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{84BCF6CD-B2A6-499E-86C8-ADA197EA15EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +41,22 @@ Global
 		{62799674-E04D-44FA-B189-87D195F89AB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62799674-E04D-44FA-B189-87D195F89AB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62799674-E04D-44FA-B189-87D195F89AB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDCE530E-B7D3-4010-896C-2A83DC63C77F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDCE530E-B7D3-4010-896C-2A83DC63C77F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDCE530E-B7D3-4010-896C-2A83DC63C77F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDCE530E-B7D3-4010-896C-2A83DC63C77F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33315B4A-4DE3-4391-BDA1-C3F320A6B185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33315B4A-4DE3-4391-BDA1-C3F320A6B185}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33315B4A-4DE3-4391-BDA1-C3F320A6B185}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33315B4A-4DE3-4391-BDA1-C3F320A6B185}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FBDBE61-F4FE-4090-B068-049FF9175F6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FBDBE61-F4FE-4090-B068-049FF9175F6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FBDBE61-F4FE-4090-B068-049FF9175F6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FBDBE61-F4FE-4090-B068-049FF9175F6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84BCF6CD-B2A6-499E-86C8-ADA197EA15EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84BCF6CD-B2A6-499E-86C8-ADA197EA15EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84BCF6CD-B2A6-499E-86C8-ADA197EA15EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84BCF6CD-B2A6-499E-86C8-ADA197EA15EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
